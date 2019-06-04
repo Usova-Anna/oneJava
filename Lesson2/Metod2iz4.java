@@ -28,24 +28,27 @@ public class Metod2iz4 {
         boolean par3=input.nextBoolean();
         System.out.println("Параметр 4: ");
         boolean par4=input.nextBoolean();
-        logic(par1,par2,par3,par4);
+        System.out.println(logic(par1,par2,par3,par4));
     }
-    public static void logic(boolean a,boolean b,boolean c,boolean d){
+    public static boolean logic(boolean a,boolean b,boolean c,boolean d){
         int counter =0;
-        if (a == true)
+        if (a) {
             counter = counter + 1;
-        if (b == true)
+        }
+        if (b) {
             counter = counter + 1;
-        if (c == true)
+        }
+        if (c) {
             counter = counter + 1;
-        if (d == true)
+        }
+        if (d) {
             counter = counter + 1;
-
+        }
         switch (counter) {
             case 2:
-                System.out.println("true, 2 оператора из 4 истинны");break;
+                return true;
             default:
-                System.out.println(false);
+              return false;
         }
     }
 }
